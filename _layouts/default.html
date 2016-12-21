@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
-
-    <!-- syntax highlighting CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-
-    <!-- Bootstrap and overrides -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/overrides.css"
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  {% if page.target_url %}
+  <meta http-equiv="refresh" content="0;url={{ page.target_url }}" />
+  {% endif %}
   </head>
-
-  <body>
-    <div class="container">
-      <div class="navbar navbar-default">
-        <div class="container-fluid">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="navbar-header">
-            <a class="navbar-brand" href="{{ site.baseurl }}/">OSMF OWG</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/reports/">Reports</a></li>
-            <li><a href="{{ site.baseurl }}/policies/">Policies</a></li>
-            <li><a href="{{ site.baseurl }}/meetings/">Meetings</a></li>
-          </ul>
-        </div>
-      </div>
-
-      {{ content }}
-
-      <footer class="footer">
-        <div class="container">
-          <p>You can contribute to this website at <a href="https://github.com/openstreetmap/owg-website">github.com/openstreetmap/owg-website</a></p>
-        </div>
-      </footer>
-    </div>
-  </body>
 </html>
